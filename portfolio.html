@@ -16,7 +16,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
@@ -37,6 +36,11 @@
             <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-open-btn btn" data-menu-open>
+          <svg class="mobile-menu-open-btn__icon" width="40px" height="40px">
+            <use href="./images/icon/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <ul class="header-contacts__list list">
           <li class="header-contacts__item">
             <a href="mailto:info@devstudio.com" class="header-contacts__link">
@@ -56,13 +60,62 @@
           </li>
         </ul>
       </div>
+      <div class="mobile-menu" data-menu>
+        <div class="mobile-menu__container container">
+          <button type="button" class="mobile-menu-close-btn btn" data-menu-close>
+            <svg class="mobile-menu-close-btn__icon" width="40px" height="40px">
+              <use href="./images/icon/icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+
+          <ul class="mobile-menu__site-nav-list list">
+            <li class="mobile-menu__site-nav-item">
+              <a href="./index.html" class="mobile-menu__site-nav-link">Студия</a>
+            </li>
+            <li class="mobile-menu__site-nav-item">
+              <a href="./portfolio.html" class="mobile-menu__site-nav-link">Портфолио</a>
+            </li>
+            <li class="mobile-menu__site-nav-item">
+              <a href="" class="mobile-menu__site-nav-link">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__contacts-list list">
+            <li class="mobile-menu__contacts-item">
+              <a href="tel:+380961111111" class="mobile-menu__contacts-link">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-menu__contacts-item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-menu__contacts-link mobile-menu__contacts-link--mail"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__social-list list">
+            <li class="mobile-menu__social-item">
+              <a href="" class="mobile-menu__social-link">Instagram</a>
+            </li>
+            <li class="mobile-menu__social-item">
+              <a href="" class="mobile-menu__social-link">Twitter</a>
+            </li>
+            <li class="mobile-menu__social-item">
+              <a href="" class="mobile-menu__social-link">Facebook</a>
+            </li>
+            <li class="mobile-menu__social-item">
+              <a href="" class="mobile-menu__social-link">Linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <!-- portfolio -->
     <main>
       <section class="portfolio">
         <div class="container">
-          <h1 class="portfolio__title">Портфолио</h1>
+          <h1 class="portfolio__title visually-hidden">Портфолио</h1>
           <!-- portfolio filters -->
           <ul class="portfolio-filters__list list">
             <li class="portfolio-filters__item">
@@ -87,13 +140,37 @@
             <li class="portfolio-prj__item">
               <a href="" class="portfolio-prj__link">
                 <div class="portfolio-prj-card">
-                  <img
-                    src="./images/portfolio/portfolio-img-1.jpg"
-                    alt="Страница веб-сайта Технокряк"
-                    width="370"
-                    height="294"
-                    class="portfolio-prj-card__img"
-                  />
+                  <picture class="portfolio-prj__picture">
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop-portfolio-img-1@1x.jpg 1x,
+                        ./images/portfolio/desktop-portfolio-img-1@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-portfolio-img-1@1x.jpg 1x,
+                        ./images/portfolio/tablet-portfolio-img-1@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-portfolio-img-1@1x.jpg 1x,
+                        ./images/portfolio/mobile-portfolio-img-1@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/mobile-portfolio-img-1@1x.jpg"
+                      alt="Страница веб-сайта Технокряк"
+                      width="370"
+                      height="294"
+                      class="portfolio-prj-card__img"
+                    />
+                  </picture>
+
                   <div class="portfolio-prj-overlay">
                     <p class="portfolio-prj-overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -111,19 +188,45 @@
             <li class="portfolio-prj__item">
               <a href="" class="portfolio-prj__link">
                 <div class="portfolio-prj-card">
-                  <img
-                    src="./images/portfolio/portfolio-img-2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                    class="portfolio-prj-card__img"
-                  />
+                  <picture class="portfolio-prj__picture">
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop-portfolio-img-2@1x.jpg 1x,
+                        ./images/portfolio/desktop-portfolio-img-2@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-portfolio-img-2@1x.jpg 1x,
+                        ./images/portfolio/tablet-portfolio-img-2@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-portfolio-img-2@1x.jpg 1x,
+                        ./images/portfolio/mobile-portfolio-img-2@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/mobile-portfolio-img-1@1x.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                      width="370"
+                      height="294"
+                      class="portfolio-prj-card__img"
+                    />
+                  </picture>
+
                   <div class="portfolio-prj-overlay">
                     <p class="portfolio-prj-overlay__text"></p>
                   </div>
                 </div>
                 <div class="portfolio-prj__desc">
-                  <h3 class="portfolio-prj__title">Постер New Orlean vs Golden Star</h3>
+                  <h3 class="portfolio-prj__title">
+                    Постер New Orlean vs Golden <span>Star</span>
+                  </h3>
                   <p class="portfolio-prj__text">Дизайн</p>
                 </div>
               </a>
@@ -131,13 +234,37 @@
             <li class="portfolio-prj__item">
               <a href="" class="portfolio-prj__link">
                 <div class="portfolio-prj-card">
-                  <img
-                    src="./images/portfolio/portfolio-img-3.jpg"
-                    alt="Логотип приложения ресторана Seafood"
-                    width="370"
-                    height="294"
-                    class="portfolio-prj-card__img"
-                  />
+                  <picture class="portfolio-prj__picture">
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop-portfolio-img-3@1x.jpg 1x,
+                        ./images/portfolio/desktop-portfolio-img-3@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-portfolio-img-3@1x.jpg 1x,
+                        ./images/portfolio/tablet-portfolio-img-3@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-portfolio-img-3@1x.jpg 1x,
+                        ./images/portfolio/mobile-portfolio-img-3@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/mobile-portfolio-img-3@1x.jpg"
+                      alt="Логотип приложения ресторана Seafood"
+                      width="370"
+                      height="294"
+                      class="portfolio-prj-card__img"
+                    />
+                  </picture>
+
                   <div class="portfolio-prj-overlay">
                     <p class="portfolio-prj-overlay__text"></p>
                   </div>
@@ -151,13 +278,37 @@
             <li class="portfolio-prj__item">
               <a href="" class="portfolio-prj__link">
                 <div class="portfolio-prj-card">
-                  <img
-                    src="./images/portfolio/portfolio-img-4.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                    class="portfolio-prj-card__img"
-                  />
+                  <picture class="portfolio-prj__picture">
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop-portfolio-img-4@1x.jpg 1x,
+                        ./images/portfolio/desktop-portfolio-img-4@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-portfolio-img-4@1x.jpg 1x,
+                        ./images/portfolio/tablet-portfolio-img-4@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-portfolio-img-4@1x.jpg 1x,
+                        ./images/portfolio/mobile-portfolio-img-4@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/mobile-portfolio-img-4@1x.jpg"
+                      alt="Наушники"
+                      width="370"
+                      height="294"
+                      class="portfolio-prj-card__img"
+                    />
+                  </picture>
+
                   <div class="portfolio-prj-overlay">
                     <p class="portfolio-prj-overlay__text"></p>
                   </div>
@@ -171,13 +322,37 @@
             <li class="portfolio-prj__item">
               <a href="" class="portfolio-prj__link">
                 <div class="portfolio-prj-card">
-                  <img
-                    src="./images/portfolio/portfolio-img-5.jpg"
-                    alt="Приложение для проекта Boxes"
-                    width="370"
-                    height="294"
-                    class="portfolio-prj-card__img"
-                  />
+                  <picture class="portfolio-prj__picture">
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop-portfolio-img-5@1x.jpg 1x,
+                        ./images/portfolio/desktop-portfolio-img-5@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-portfolio-img-5@1x.jpg 1x,
+                        ./images/portfolio/tablet-portfolio-img-5@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-portfolio-img-5@1x.jpg 1x,
+                        ./images/portfolio/mobile-portfolio-img-5@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/mobile-portfolio-img-5@1x.jpg"
+                      alt="Приложение для проекта Boxes"
+                      width="370"
+                      height="294"
+                      class="portfolio-prj-card__img"
+                    />
+                  </picture>
+
                   <div class="portfolio-prj-overlay">
                     <p class="portfolio-prj-overlay__text"></p>
                   </div>
@@ -191,13 +366,37 @@
             <li class="portfolio-prj__item">
               <a href="" class="portfolio-prj__link">
                 <div class="portfolio-prj-card">
-                  <img
-                    src="./images/portfolio/portfolio-img-6.jpg"
-                    alt="Веб-сайт Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                    class="portfolio-prj-card__img"
-                  />
+                  <picture class="portfolio-prj__picture">
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop-portfolio-img-6@1x.jpg 1x,
+                        ./images/portfolio/desktop-portfolio-img-6@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-portfolio-img-6@1x.jpg 1x,
+                        ./images/portfolio/tablet-portfolio-img-6@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-portfolio-img-6@1x.jpg 1x,
+                        ./images/portfolio/mobile-portfolio-img-6@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/mobile-portfolio-img-6@1x.jpg"
+                      alt="Веб-сайт Inspiration has no Borders"
+                      width="370"
+                      height="294"
+                      class="portfolio-prj-card__img"
+                    />
+                  </picture>
+
                   <div class="portfolio-prj-overlay">
                     <p class="portfolio-prj-overlay__text"></p>
                   </div>
@@ -211,13 +410,37 @@
             <li class="portfolio-prj__item">
               <a href="" class="portfolio-prj__link">
                 <div class="portfolio-prj-card">
-                  <img
-                    src="./images/portfolio/portfolio-img-7.jpg"
-                    alt="Дизайн страницы журнала"
-                    width="370"
-                    height="294"
-                    class="portfolio-prj-card__img"
-                  />
+                  <picture class="portfolio-prj__picture">
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop-portfolio-img-7@1x.jpg 1x,
+                        ./images/portfolio/desktop-portfolio-img-7@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-portfolio-img-7@1x.jpg 1x,
+                        ./images/portfolio/tablet-portfolio-img-7@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-portfolio-img-7@1x.jpg 1x,
+                        ./images/portfolio/mobile-portfolio-img-7@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/mobile-portfolio-img-7@1x.jpg"
+                      alt="Дизайн страницы журнала"
+                      width="370"
+                      height="294"
+                      class="portfolio-prj-card__img"
+                    />
+                  </picture>
+
                   <div class="portfolio-prj-overlay">
                     <p class="portfolio-prj-overlay__text"></p>
                   </div>
@@ -231,13 +454,37 @@
             <li class="portfolio-prj__item">
               <a href="" class="portfolio-prj__link">
                 <div class="portfolio-prj-card">
-                  <img
-                    src="./images/portfolio/portfolio-img-8.jpg"
-                    alt="Проект LAB"
-                    width="370"
-                    height="294"
-                    class="portfolio-prj-card__img"
-                  />
+                  <picture class="portfolio-prj__picture">
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop-portfolio-img-8@1x.jpg 1x,
+                        ./images/portfolio/desktop-portfolio-img-8@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-portfolio-img-8@1x.jpg 1x,
+                        ./images/portfolio/tablet-portfolio-img-8@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-portfolio-img-8@1x.jpg 1x,
+                        ./images/portfolio/mobile-portfolio-img-8@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/mobile-portfolio-img-8@1x.jpg"
+                      alt="Проект LAB"
+                      width="370"
+                      height="294"
+                      class="portfolio-prj-card__img"
+                    />
+                  </picture>
+
                   <div class="portfolio-prj-overlay">
                     <p class="portfolio-prj-overlay__text"></p>
                   </div>
@@ -251,13 +498,37 @@
             <li class="portfolio-prj__item">
               <a href="" class="portfolio-prj__link">
                 <div class="portfolio-prj-card">
-                  <img
-                    src="./images/portfolio/portfolio-img-9.jpg"
-                    alt="Приложение Growing Business"
-                    width="370"
-                    height="294"
-                    class="portfolio-prj-card__img"
-                  />
+                  <picture class="portfolio-prj__picture">
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop-portfolio-img-9@1x.jpg 1x,
+                        ./images/portfolio/desktop-portfolio-img-9@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet-portfolio-img-9@1x.jpg 1x,
+                        ./images/portfolio/tablet-portfolio-img-9@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile-portfolio-img-9@1x.jpg 1x,
+                        ./images/portfolio/mobile-portfolio-img-9@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/mobile-portfolio-img-9@1x.jpg"
+                      alt="Приложение Growing Business"
+                      width="370"
+                      height="294"
+                      class="portfolio-prj-card__img"
+                    />
+                  </picture>
+
                   <div class="portfolio-prj-overlay">
                     <p class="portfolio-prj-overlay__text"></p>
                   </div>
@@ -359,5 +630,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
