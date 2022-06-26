@@ -1,7 +1,5 @@
 .footer-subscription-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %align-mobile;
     margin-top: 60px;
 }
 
@@ -17,9 +15,8 @@
 
 .subscription-form {
     position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @extend %align-mobile;
+    
 }
 
 .subscription-form__input {
