@@ -47,10 +47,20 @@
     }
 }
 
+// .portfolio-prj__list {
+//     @extend %align-mobile;
+// }
+
 @media screen and (max-width: 767px) {
     .portfolio-prj__item:not(:last-child) {
             margin-bottom: 30px;
         }
+
+    .portfolio-prj__item {
+        width: 450px;
+    }
+
+                                
 }
 
 
@@ -148,12 +158,14 @@
 
     .portfolio-prj__list {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap;        
         margin: -15px;
     }
 
     .portfolio-prj__item {
+        display: flex;
         margin: 15px;
+        
     }
 
     .portfolio-prj-card {
@@ -164,13 +176,19 @@
         width: 354px;
     }
 
-        
+                // .portfolio-prj__desc {
+                //     flex-grow: 1;
+                // }
+
+                //                 .portfolio-prj__text {
+                //                     flex-grow: 1;
+                //                 }
 }
 
 @media screen and (max-width: 1199px) {
-    .portfolio-prj__item:nth-child(1) .portfolio-prj__desc {
-            padding-bottom: 56px;
-        }
+    // .portfolio-prj__item:nth-child(1) .portfolio-prj__desc {
+    //         padding-bottom: 56px;
+    //     }
     
     .portfolio-prj__title span {
         display: block;

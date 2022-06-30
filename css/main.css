@@ -94,7 +94,7 @@ body {
   margin-right: auto;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .container {
     width: 480px;
   }
@@ -534,7 +534,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -585,7 +584,6 @@ body {
 @media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/tablet-hero-Img@1x.jpg");
-    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -635,6 +633,7 @@ body {
   text-transform: uppercase;
   color: var(--title-text-color);
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .quolities__desc {
@@ -649,6 +648,10 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: -15px;
+  }
+
+  .quolities__title {
+    text-align: start;
   }
 
   .quolities__item {
@@ -961,6 +964,10 @@ body {
   .portfolio-prj__item:not(:last-child) {
     margin-bottom: 30px;
   }
+
+  .portfolio-prj__item {
+    width: 450px;
+  }
 }
 .portfolio-prj__link {
   display: block;
@@ -1052,6 +1059,7 @@ body {
   }
 
   .portfolio-prj__item {
+    display: flex;
     margin: 15px;
   }
 
@@ -1064,10 +1072,6 @@ body {
   }
 }
 @media screen and (max-width: 1199px) {
-  .portfolio-prj__item:nth-child(1) .portfolio-prj__desc {
-    padding-bottom: 56px;
-  }
-
   .portfolio-prj__title span {
     display: block;
   }
@@ -1360,6 +1364,9 @@ body {
     transition: color 250ms var(--primary-cubic-bezier);
   }
   .mobile-menu__site-nav-link:hover, .mobile-menu__site-nav-link:focus {
+    color: var(--accent-text-color);
+  }
+  .mobile-menu__site-nav-link.mobile-menu__site-nav-link--current {
     color: var(--accent-text-color);
   }
 

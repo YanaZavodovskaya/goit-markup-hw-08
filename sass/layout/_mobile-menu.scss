@@ -74,6 +74,10 @@
                 color: var(--accent-text-color);
             }
 
+            &.mobile-menu__site-nav-link--current {
+                color: var(--accent-text-color);
+            }
+
         }
         
         .mobile-menu__site-nav-item:not(:last-child) {
