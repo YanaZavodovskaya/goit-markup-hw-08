@@ -124,9 +124,9 @@
 }
 
 @media screen and (max-width: 479px) {
-    .mobile-menu__site-nav-link {
-        @include font(28px, 33px, 500);
-    }
+    // .mobile-menu__site-nav-link {
+    //     @include font(28px, 33px, 500);
+    // }
 
     .mobile-menu__contacts-link {
         @include font(24px, 28px, 500);

@@ -1447,12 +1447,6 @@ body {
   }
 }
 @media screen and (max-width: 479px) {
-  .mobile-menu__site-nav-link {
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 1.1785714286;
-  }
-
   .mobile-menu__contacts-link {
     font-weight: 500;
     font-size: 24px;

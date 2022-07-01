@@ -1,3 +1,15 @@
+// @media screen and (max-width: 479px) {
+// .modal-window {
+// max-width: 450px;
+// }
+// }
+
+// @media screen and (max-width: 767px) {
+//     .modal-window {
+//         width: 450px;
+//     }
+// }
+
 .backdrop.is-hidden .modal-window {
     transform: translate(-50%, -50%) scale(0.7);
     opacity: 0.5;
@@ -16,6 +28,7 @@
     opacity: 1;
     transition: transform 300ms var(--primary-cubic-bezier), opacity 300ms var(--primary-cubic-bezier);
 }
+
 
 .close-btn {
     position: absolute;
