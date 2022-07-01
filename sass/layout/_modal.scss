@@ -1,14 +1,10 @@
-// @media screen and (max-width: 479px) {
-// .modal-window {
-// max-width: 450px;
-// }
-// }
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+.modal-window {
+max-width: 450px;
+height: 609px;
+}
+}
 
-// @media screen and (max-width: 767px) {
-//     .modal-window {
-//         width: 450px;
-//     }
-// }
 
 .backdrop.is-hidden .modal-window {
     transform: translate(-50%, -50%) scale(0.7);
@@ -20,8 +16,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 450px;
-    height: 609px;
+    width: 90%;
+    // min-height: 609px;
     padding: 40px;
     background-color: #ffffff;
 
@@ -71,6 +67,7 @@
 
 .modal-form__label {
     position: relative;
+
     &:not(:last-child) {
         margin-bottom: 10px;
     }
@@ -154,7 +151,7 @@
     letter-spacing: 0.03em;
     margin-bottom: 30px;
 
-    
+
 }
 
 .modal-form-checkbox__label::before {
