@@ -2,14 +2,13 @@
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
-
     margin-left: auto;
-    margin-right: auto;
+        margin-right: auto;
 
-    // outline: 2px solid rgb(255, 150, 123);
+    // outline: 6px solid rgb(83, 71, 255);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
     .container {
         width: 480px;
     }

@@ -1,11 +1,19 @@
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .footer-subscription-form {
+            width: 450px;
+        }
+}
+
 .footer-subscription-form {
     @extend %align-mobile;
     margin-top: 60px;
+    max-width: 450px;
+
+    // outline: 6px solid rgb(83, 71, 255);
 }
 
 .footer-subscription-form__title {
     @include font(14px, 16.41px);
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #ffffff;
 
@@ -15,12 +23,13 @@
 
 .subscription-form {
     position: relative;
+    width: 100%;    
     @extend %align-mobile;
     
 }
 
-.subscription-form__input {
-    width: 450px;
+.subscription-form__input {    
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -43,7 +52,6 @@
 
 .subscription-form input::placeholder {
     @include font(16px, 20px, 400);
-    letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -79,6 +87,8 @@
     height: 24px;
     margin-left: 10px;
 }
+
+
 
 @media screen and (min-width: 1200px) {
     .footer-subscription-form {            
