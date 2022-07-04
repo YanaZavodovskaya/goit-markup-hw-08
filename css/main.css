@@ -22,7 +22,7 @@
   overflow: hidden;
 }
 
-.modal-form__btn, .modal-form-checkbox__label, .close-btn, .clients__link, .social-icon__link, .social-icon__list, .quolities-icon, .footer-social__link, .footer-social__list {
+.modal-form__btn, .close-btn, .clients__link, .social-icon__link, .social-icon__list, .quolities-icon, .footer-social__link, .footer-social__list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1130,15 +1130,10 @@ body {
     justify-content: center;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .modal-window {
-    max-width: 450px;
-    height: 609px;
-  }
-}
 .backdrop.is-hidden .modal-window {
   transform: translate(-50%, -50%) scale(0.7);
   opacity: 0.5;
+  overflow: scroll;
 }
 
 .modal-window {
@@ -1146,7 +1141,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 90%;
+  width: 100%;
+  height: 100%;
   padding: 40px;
   background-color: #ffffff;
   opacity: 1;
@@ -1178,9 +1174,8 @@ body {
 .modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.172;
+  line-height: 1.5;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--title-text-color);
   display: block;
   margin-bottom: 12px;
@@ -1254,10 +1249,7 @@ body {
 .modal-form__textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.1666666667;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  line-height: 1.3333333333;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -1266,23 +1258,26 @@ body {
 }
 
 .modal-form-checkbox__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666666667;
-  letter-spacing: 0.03em;
   margin-bottom: 30px;
+  margin-right: 0;
 }
 
 .modal-form-checkbox__label::before {
   content: "";
   cursor: pointer;
-  display: block;
+  display: inline-block;
   width: 16px;
   height: 15px;
   border: 2px solid var(--title-text-color);
   border-radius: 4px;
   background-color: #ffffff;
-  margin-right: 8.4px;
+  margin-right: 4.4px;
 }
 .modal-form-checkbox:checked + .modal-form-checkbox__label::before {
   background-color: var(--accent-text-color);
@@ -1325,16 +1320,46 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (max-width: 479px) {
+  .modal-window {
+    max-width: 450px;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal-window {
+    width: 450px;
+    height: 609px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal-window {
     width: 528px;
     height: 581px;
   }
 
+  .modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.172;
+  }
+
+  .modal-form__textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.3333333333;
+  }
+
   .modal-form-checkbox__label {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7142857143;
+  }
+
+  .modal-form-checkbox__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1343,6 +1368,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
+    height: 100%;
     height: 100%;
     background-color: #ffffff;
     opacity: 0;
@@ -1361,7 +1387,7 @@ body {
   .mobile-menu-close-btn {
     position: absolute;
     top: 15px;
-    right: 0;
+    right: 15px;
   }
 
   .mobile-menu-close-btn__icon {
@@ -1378,10 +1404,6 @@ body {
   }
   .mobile-menu-open-btn:hover .mobile-menu-open-btn__icon, .mobile-menu-open-btn:focus .mobile-menu-open-btn__icon {
     fill: var(--accent-text-color);
-  }
-
-  .mobile-menu__site-nav-list {
-    margin-bottom: 70%;
   }
 
   .mobile-menu__site-nav-link {
@@ -1481,10 +1503,12 @@ body {
   position: relative;
   padding-top: 48px;
   padding-bottom: 48px;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
-  outline: 2px solid rgb(19, 111, 216);
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
