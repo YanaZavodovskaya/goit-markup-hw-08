@@ -1407,6 +1407,10 @@ body {
     fill: var(--accent-text-color);
   }
 
+  .mobile-menu__site-nav-list {
+    width: 100%;
+  }
+
   .mobile-menu__site-nav-link {
     font-weight: 500;
     font-size: 40px;
